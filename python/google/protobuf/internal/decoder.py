@@ -189,7 +189,7 @@ def ReadTag(buffer, pos):
   while (ord(buffer[pos]) if py2 else buffer[pos]) & 0x80:
     pos += 1
   pos += 1
-  return (buffer[start:pos], pos)
+  return (bytes(buffer[start:pos]), pos)
 
 
 # --------------------------------------------------------------------
